@@ -19,6 +19,6 @@ public class MessageController {
 
     @PostMapping("/kafka")
     public void publish(@RequestBody MessageRequest request) {
-        kafkaTemplate.send("sometopic", request.getMessage());
+        kafkaTemplate.send("alerts", request.getMessage());
     }
 }
